@@ -1,5 +1,7 @@
 package com.terence.springdemo.session;
 
+import org.apache.catalina.startup.VersionLoggerListener;
+
 import javax.websocket.Session;
 
 public class SessionDemo {
