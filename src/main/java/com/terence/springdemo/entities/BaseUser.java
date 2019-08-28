@@ -1,6 +1,12 @@
 package com.terence.springdemo.entities;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.elasticsearch.annotations.Document;
+
+@Document(indexName = "base", type = "user", refreshInterval = "0s")
 public class BaseUser {
+	@Id
+	private long id ;
 	private String name ;
 	private String address;
 	private String sex;
@@ -45,5 +51,13 @@ public class BaseUser {
 
 	public void setBirthday(String birthday) {
 		this.birthday = birthday;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public long getId() {
+		return id;
 	}
 }
