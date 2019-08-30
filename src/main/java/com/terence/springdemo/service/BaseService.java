@@ -1,4 +1,10 @@
 package com.terence.springdemo.service;
 
-public class BaseService {
+import com.terence.springdemo.entities.BaseUser;
+
+import java.util.List;
+
+public interface BaseService {
+	void addUser(BaseUser user);
+	List<BaseUser> searchUsers();
 }
