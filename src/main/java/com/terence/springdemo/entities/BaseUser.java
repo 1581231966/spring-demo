@@ -1,6 +1,16 @@
 package com.terence.springdemo.entities;
 
-public class BaseUser {
+import com.fasterxml.jackson.annotation.JsonInclude;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.elasticsearch.annotations.Document;
+
+import java.io.Serializable;
+
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
+@Document(indexName = "base", type = "_doc", refreshInterval = "0s")
+public class BaseUser implements Serializable {
+	@Id
+	private String id ;
 	private String name ;
 	private String address;
 	private String sex;
@@ -45,5 +55,13 @@ public class BaseUser {
 
 	public void setBirthday(String birthday) {
 		this.birthday = birthday;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getId() {
+		return id;
 	}
 }
