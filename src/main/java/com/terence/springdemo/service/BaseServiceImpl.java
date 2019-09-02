@@ -15,11 +15,11 @@ public class BaseServiceImpl implements BaseService {
 
 	@Override
 	public void addUser(BaseUser user) {
-		dao.addUser(user);
+		dao.save(user);
 	}
 
 	@Override
 	public List<BaseUser> searchUsers() {
-		return dao.searchUsers();
+		return (List<BaseUser>) dao.findAll();
 	}
 }

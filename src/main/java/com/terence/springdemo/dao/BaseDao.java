@@ -3,12 +3,9 @@ package com.terence.springdemo.dao;
 
 import com.terence.springdemo.entities.BaseUser;
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Component;
 
-import java.util.List;
-
-@Repository
+@Component
 public interface BaseDao extends ElasticsearchRepository<BaseUser, String> {
-	void addUser(BaseUser user);
-	List<BaseUser> searchUsers();
+
 }
