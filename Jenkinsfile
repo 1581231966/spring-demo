@@ -1,6 +1,7 @@
 #!groovy
 
 pipeline {
+    angent any
     stages {
         stage('Checkout') {
             steps {
