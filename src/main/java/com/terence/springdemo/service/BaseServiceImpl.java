@@ -18,10 +18,12 @@ public class BaseServiceImpl implements BaseService {
 
 	@Override
 	public void addUser(BaseUser user) {
+		logger.info("----Start to save a user entity.----");
 		dao.save(user);
 		for (BaseUser responeUser : dao.findAll()){
 			System.out.println(responeUser.toString());
 		}
+		logger.info("------------Save done.--------------");
 	}
 
 	@Override
