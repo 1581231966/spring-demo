@@ -15,7 +15,7 @@ pipeline {
 
         stage('Init') {
             steps {
-                sh 'rm -rf target'
+                sh 'rmdir  target'
             }
         }
 
@@ -24,5 +24,5 @@ pipeline {
                 sh "mvn clean package"
             }
         }
-}
+    }
 }
