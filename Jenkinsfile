@@ -1,7 +1,7 @@
 #!groovy
 
 pipeline {
-    angent any
+    agent any
     stages {
         stage('Checkout') {
             steps {
