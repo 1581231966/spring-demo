@@ -7,7 +7,7 @@ pipeline {
             steps {
                 dir('spring-demo'){
                     git(
-                        url:'https://git.ehealthinsurance.com/scm/ptfm/provider-conf.git'
+                        url:'https://github.com/1581231966/spring-demo.git'
                     )
                 }
             }
