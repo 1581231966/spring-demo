@@ -13,12 +13,6 @@ pipeline {
             }
         }
 
-        stage('Init') {
-            steps {
-                sh 'rmdir  target'
-            }
-        }
-
         stage('Build') {
             steps {
                 sh "mvn clean package"
